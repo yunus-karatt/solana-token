@@ -28,7 +28,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const originalEndPoint = useMemo(() => clusterApiUrl(network), [network]);
   let endpoint;
   if (network === "mainnet-beta") {
-    endpoint = "url";
+    endpoint = "https://solana-mainnet.g.alchemy.com/v2/wLLRoZP5evicZYojK1ogY5_TqpZOxosb";
   } else if (network === "devnet") {
     endpoint = originalEndPoint;
   } else {
@@ -66,7 +66,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-export const ConnectionProvider:FC<{children:ReactNode}>=({children})=>{
+export const ContextProvider:FC<{children:ReactNode}>=({children})=>{
   return(
     <>
     <NetworkConfigurationProvider>

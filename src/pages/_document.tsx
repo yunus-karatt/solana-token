@@ -15,12 +15,12 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="stylesheet" href="/favicon.icon" />
+          <link rel="icon" href="/favicon.icon" />
+        </Head>
           <body>
             <Main />
             <NextScript />
           </body>
-        </Head>
       </Html>
     );
   }

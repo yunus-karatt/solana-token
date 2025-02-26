@@ -1,10 +1,10 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { FC } from "react";
-import { ContextProvider } from "../contexts/AutoConnectProvider";
+import { ContextProvider } from "../contexts/ContextProvider";
 import Notification from "components/Notification";
-import AppBar from "components/AppBar";
-import Footer from "components/Footer";
+import {AppBar} from "components/AppBar";
+import {Footer} from "components/Footer";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 require("../styles/globals.css");
@@ -33,3 +33,5 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     </div>
   );
 };
+
+export default App
