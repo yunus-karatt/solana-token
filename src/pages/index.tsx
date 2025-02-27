@@ -1,35 +1,48 @@
-import React, { useState } from 'react'
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import React, { useState } from "react";
+import type { NextPage } from "next";
+import Head from "next/head";
 
-
-import { AirdropView, ContactView, CreateView, DonateView, FaqView, FeatureView, HomeView, InputView, OfferView, TokenMetadata, ToolView } from '../views'
+import {
+  AirdropView,
+  ContactView,
+  CreateView,
+  DonateView,
+  FaqView,
+  FeatureView,
+  HomeView,
+  InputView,
+  OfferView,
+  TokenMetadata,
+  ToolView,
+} from "../views";
 
 const Home: NextPage = (props) => {
-
   // state variable
-  const [openCreateModal, setOpenCreateModal] = useState(false)
-  const [openTokenMetadata, setOpenTokenMetadata] = useState(false)
-  const [openContact, setOpenContact] = useState(false)
-  const [openDonate, setOpenDonate] = useState(false)
-  const [openAirdrop, setOpenAirdrop] = useState(false)
-  const [openSendTransaction, setOpenSendTransaction] = useState(false)
+  const [openCreateModal, setOpenCreateModal] = useState(false);
+  const [openTokenMetadata, setOpenTokenMetadata] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
+  const [openDonate, setOpenDonate] = useState(false);
+  const [openAirdrop, setOpenAirdrop] = useState(false);
+  const [openSendTransaction, setOpenSendTransaction] = useState(false);
 
   return (
     <>
       <Head>
         <title>Solana Token Creator</title>
-        <meta name='solana token creator' content='Build and create solan token' />
+        <meta
+          name="solana token creator"
+          content="Build and create solan token"
+        />
       </Head>
       <HomeView setOpenCreateModal={setOpenCreateModal} />
-       <ToolView
+      <ToolView
         setOpenCreateModal={setOpenCreateModal}
         setOpenTokenMetadata={setOpenTokenMetadata}
         setOpenContact={setOpenContact}
         setOpenAirdrop={setOpenAirdrop}
         setOpenSendTransaction={setOpenSendTransaction}
       />
-    {/*  <FeatureView
+      <FeatureView
         setOpenCreateModal={setOpenCreateModal}
         setOpenTokenMetadata={setOpenTokenMetadata}
         setOpenContact={setOpenContact}
@@ -40,7 +53,7 @@ const Home: NextPage = (props) => {
       <FaqView />
 
       {/* dynamic companant */}
-      {
+      {/*  {
         openCreateModal &&
         <div className="new_loader relative h-full bg-slate-900">
           <CreateView setOpenCreateModal={setOpenCreateModal} />
@@ -70,9 +83,8 @@ const Home: NextPage = (props) => {
           <DonateView setOpenSendTransaction={setOpenSendTransaction} />
         </div>
       } */}
-
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
