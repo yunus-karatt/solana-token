@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Branding = () => {
+const Branding:FC = ({image,title,message}) => {
   return (
-    <div>Branding</div>
+    <div className='ps-4 hidden py-4 lg:block '>
+      <div className='relative h-full w-full overflow-hidden rounded-xl'>
+        <img src={`assets/images/ai/${image}.jpg`} alt="" className='h-full w-full -scale-100 transform' />
+      </div>
+    </div>
   )
 }
 
