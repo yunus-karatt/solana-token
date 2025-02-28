@@ -59,13 +59,13 @@ const Home: NextPage = (props) => {
           <CreateView setOpenCreateModal={setOpenCreateModal} />
         </div>
       }
-      {/*  {
+       {
         openTokenMetadata &&
         <div className="new_loader relative h-full bg-slate-900">
           <TokenMetadata setOpenTokenMetadata={setOpenTokenMetadata} />
         </div>
       }
-      {
+     {/*  {
         openContact &&
         <div className="new_loader relative h-full bg-slate-900">
           <ContactView setOpenContact={setOpenContact} />
